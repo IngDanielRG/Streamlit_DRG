@@ -32,7 +32,6 @@ def header():
         st.write("No")
     elif not button1:
         st.write("Golf'nt")
-            
-   
-            
+          
 sidebar()
+header()
