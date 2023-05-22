@@ -27,7 +27,7 @@ def header():
         st.write("Golf")
         
   with col2:
-    button2 = st.button("TRC?")
+    button2 = st.button("TRC")
     if button2:
         st.write("No")
     elif not button1:
