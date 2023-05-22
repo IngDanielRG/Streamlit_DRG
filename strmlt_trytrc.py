@@ -21,16 +21,18 @@ def header():
   
   with col1:
     button1 = st.button("TRC?")
-        if button1:
-            st.write("Si")
-        elif not button1:
-            st.write("Golf")
+    if button1:
+        st.write("Si")
+    elif not button1:
+        st.write("Golf")
+        
+  with col2:
+    button2 = st.button("TRC?")
+    if button2:
+        st.write("No")
+    elif not button1:
+        st.write("Golf'nt")
             
-   with col1:
-    button1 = st.button("TRC?")
-        if button1:
-            st.write("No")
-        elif not button1:
-            st.write("Golf'nt")
+   
             
 sidebar()
