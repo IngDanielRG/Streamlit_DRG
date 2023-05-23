@@ -34,10 +34,11 @@ def header():
         st.write("Golf'nt")
         
 def barra():
-    st.bar_chart(data=2, x=5, y=6, width=10, height=10, use_container_width=True)
-    
-    
-          
+    chart_data = pd.DataFrame(
+        np.random.randn(50,3)
+        colum = ["a", "b", "c"]
+    st.bar_chart(chart_data)
+        
 sidebar()
 header()
 barra()
