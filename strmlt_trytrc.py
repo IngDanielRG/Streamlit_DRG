@@ -32,6 +32,12 @@ def header():
         st.write("No")
     elif not button1:
         st.write("Golf'nt")
+        
+def barra():
+    st.bar_chart(data=None, *, x=None, y=None, width=0, height=0, use_container_width=True)
+    
+    
           
 sidebar()
 header()
+barra()
