@@ -35,9 +35,13 @@ def header():
         
 def barra():
     chart_data = pd.DataFrame(
-        np.random.randn(50,3)
-        column = ["a", "b", "c"])
-    st.bar_chart(chart_data)
+        np.random.randn(20, 3),
+        columns=['a', 'b', 'c'])
+
+    c = alt.Chart(chart_data).mark_circle().encode(
+        x='a', y='b', size='c', color='c', tooltip=['a', 'b', 'c'])
+
+    st.altair_chart(c, use_container_width=True)
         
 sidebar()
 header()
