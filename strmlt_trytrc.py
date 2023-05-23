@@ -34,7 +34,7 @@ def header():
         st.write("Golf'nt")
         
 def barra():
-    st.bar_chart(data=None, *, x=None, y=None, width=0, height=0, use_container_width=True)
+    st.bar_chart(data=2, *, x=5, y=6, width=10, height=10, use_container_width=True)
     
     
           
