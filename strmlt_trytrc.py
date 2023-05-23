@@ -35,9 +35,14 @@ def header():
     elif not button1:
         st.write("Golf'nt")
       
-def xls():
-    game_data = pd.read_csv("Game.csv")
-    df = pd.DataFrame(game_data)
+def xls():with dataset:
+        st.header("Dataset")
+        st.text("Texto Texto Dataset")
+
+        game_data = pd.read_csv("Game.csv")
+        st.write(game_data.head())
+
+        
     
 def barra():
     chart_data = pd.DataFrame(
