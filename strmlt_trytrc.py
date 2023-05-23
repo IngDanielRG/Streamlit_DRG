@@ -8,7 +8,7 @@ game_data = pd.read_csv("Game.csv")
 def sidebar():
     # st.title("O")
     st.markdown("<h1 style='text-align: center; color: #7D3C98 ;'> Rearreanged</h1>", unsafe_allow_html=True)
-     with st.sidebar:
+    with st.sidebar:
         st.header("Encabezado")
         st.subheader("Subencabezado")
         text = st.text_area("Filtrar ")
