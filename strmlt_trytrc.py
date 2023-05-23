@@ -3,6 +3,8 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
+game_data = pd.read_csv("Game.csv")
+
 def sidebar():
     # st.title("O")
     st.markdown("<h1 style='text-align: center; color: #7D3C98 ;'> Rearreanged</h1>", unsafe_allow_html=True)
@@ -32,7 +34,11 @@ def header():
         st.write("No")
     elif not button1:
         st.write("Golf'nt")
-        
+      
+def xls():
+    game_data = pd.read_csv("Game.csv")
+    df = pd.DataFrame(game_data)
+    
 def barra():
     chart_data = pd.DataFrame(
         np.random.randn(20, 3),
@@ -42,4 +48,5 @@ def barra():
         
 sidebar()
 header()
+xls()
 barra()
