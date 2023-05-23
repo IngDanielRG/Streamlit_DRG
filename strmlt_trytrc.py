@@ -35,12 +35,13 @@ def header():
     elif not button1:
         st.write("Golf'nt")
       
-def xls():with dataset:
-        st.header("Dataset")
-        st.text("Texto Texto Dataset")
+def xls():
+        with dataset:
+            st.header("Dataset")
+            st.text("Texto Texto Dataset")
 
-        game_data = pd.read_csv("Game.csv")
-        st.write(game_data.head())
+            game_data = pd.read_csv("Game.csv")
+            st.write(game_data.head())
 
         
     
