@@ -38,7 +38,7 @@ def barra():
         np.random.randn(20, 3),
         columns=['a', 'b', 'c'])
 
-    st.line_chart(chart_data)
+    st.area_chart(chart_data)
         
 sidebar()
 header()
