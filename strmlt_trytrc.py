@@ -36,13 +36,7 @@ def header():
         st.write("Golf'nt")
       
 def xls():
-    with dataset:
-        st.header("Dataset")
-        st.text("Texto Texto Dataset")
-
-        game_data = pd.read_csv("Game.csv")
-        st.write(game_data.header())
-
+    game_data = pd.read_csv("Game.csv")
         
     
 def barra():
