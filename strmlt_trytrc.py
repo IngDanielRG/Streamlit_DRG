@@ -37,13 +37,18 @@ def header():
         st.write("Golf'nt")
         
   with col3:
+    button3 = st.button("Doc")
+    if button3:
+        st.write("No")
+    elif not button3:
+        st.write("Ask")
 
   with col4:
-    button4 = st.button("TRC")
+    button4 = st.button("Han")
     if button4:
         st.write("No")
     elif not button4:
-        st.write("Golf'nt")
+        st.write("Q")
       
 def xls():
     game_data = pd.read_csv("Game.csv")
