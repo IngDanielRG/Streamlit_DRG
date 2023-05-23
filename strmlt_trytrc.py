@@ -41,7 +41,7 @@ def xls():
         st.text("Texto Texto Dataset")
 
         game_data = pd.read_csv("Game.csv")
-        st.write(game_data.head())
+        st.write(game_data.header())
 
         
     
