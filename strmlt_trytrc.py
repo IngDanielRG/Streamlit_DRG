@@ -9,18 +9,18 @@ import numpy as np
 def sidebar():
     st.markdown("<h1 style='text-align: center; color: #7D3C98 ;'> Rearreanged</h1>", unsafe_allow_html=True)
 
-        select = option_menu(
-            menu_title = "Main Menu", #required
-            options = ["Operaciones", "Ventas", "Membresías"], #required
-            icons = ["gear", "bar-chart", "person-badge"], #optional --- https://icons.getbootstrap.com/
-            orientation = "horizontal",
-        )
-    if select == "Home":
-        st.title(f"You have selected {select}")
-    elif select == "Projects":
-        st.title(f"You have selected {select}")
-    elif select == "Contact":
-        st.title(f"You have selected {select}")
+    select = option_menu(
+        menu_title = "Main Menu", #required
+        options = ["Operaciones", "Ventas", "Membresías"], #required
+        icons = ["gear", "bar-chart", "person-badge"], #optional --- https://icons.getbootstrap.com/
+        orientation = "horizontal",
+    )
+if select == "Home":
+    st.title(f"You have selected {select}")
+elif select == "Projects":
+    st.title(f"You have selected {select}")
+elif select == "Contact":
+    st.title(f"You have selected {select}")
             
            
 def header():
