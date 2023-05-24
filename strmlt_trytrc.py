@@ -14,6 +14,7 @@ def sidebar():
             menu_title = "Main Menu", #required
             options = ["Operaciones", "Ventas", "Membresías"], #required
             icons = ["gear", "bar-chart", "person-badge"], #optional --- https://icons.getbootstrap.com/
+            orientation = "horizontal",
         )
     if select == "Home":
         st.title(f"You have selected {select}")
