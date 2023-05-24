@@ -10,8 +10,8 @@ def sidebar():
     
     with st.sidebar:
         selected = option_menu(
-            menu_title = "Main Menu", 
-            options = ["Home", "Projects", "Contact"],
+            menu_title = "Main Menu", #required
+            options = ["Home", "Projects", "Contact"], #required
         )
     if selected == "Home":
         st.title(f"You have selected {selected}")
