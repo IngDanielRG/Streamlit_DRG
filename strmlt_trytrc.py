@@ -50,10 +50,10 @@ def header():
       
 def csv():
     csv_url = "https://github.com/IngDanielRG/Streamlit_DRG/blob/main/Game.csv"
-    # Load the .xls file
+    # Load the .csv file
     df = pd.read_csv(csv_url)
     # Display the table using Streamlit
-    st.line_chart(df)
+    st.data_frame(df)
         
     
 def barra():
