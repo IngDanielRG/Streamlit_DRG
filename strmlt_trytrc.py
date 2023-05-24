@@ -15,6 +15,7 @@ def sidebar():
         icons = ["gear", "bar-chart", "person-badge"], #optional --- https://icons.getbootstrap.com/
         orientation = "horizontal",
     )
+    
 if select == "Home":
     st.title(f"You have selected {select}")
 elif select == "Projects":
