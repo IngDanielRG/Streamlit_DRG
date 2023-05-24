@@ -12,8 +12,8 @@ def sidebar():
     with st.sidebar:
         select = option_menu(
             menu_title = "Main Menu", #required
-            options = ["Home", "Ventas", "Membresías"], #required
-            icons = ["house", "coin", "person-badge"], #optional --- https://icons.getbootstrap.com/
+            options = ["Operaciones", "Ventas", "Membresías"], #required
+            icons = ["gear", "bar-chart", "person-badge"], #optional --- https://icons.getbootstrap.com/
         )
     if select == "Home":
         st.title(f"You have selected {select}")
