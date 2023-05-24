@@ -3,8 +3,6 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
-game_data = pd.read_csv("Game.csv")
-
 def sidebar():
     # st.title("O")
     st.markdown("<h1 style='text-align: center; color: #7D3C98 ;'> Rearreanged</h1>", unsafe_allow_html=True)
@@ -51,7 +49,7 @@ def header():
         st.write("Q")
       
 def csv():
-    csv_url = "https://github.com/IngDanielRG/Streamlit_DRG/blob/main/Game.csv"
+    csv_url = "https://raw.github.com/IngDanielRG/Streamlit_DRG/blob/main/Game.csv"
     # Load the .xls file
     df = pd.read_excel(csv_url)
     # Display the table using Streamlit
