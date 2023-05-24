@@ -10,7 +10,7 @@ def sidebar():
     st.markdown("<h1 style='text-align: center; color: #7D3C98 ;'> Rearreanged</h1>", unsafe_allow_html=True)
 
     select = option_menu(
-        menu_title = "Main Menu", #required
+        menu_title = None, #required
         options = ["Operaciones", "Ventas", "Membresías"], #required
         icons = ["gear", "bar-chart", "person-badge"], #optional --- https://icons.getbootstrap.com/
         orientation = "horizontal",
