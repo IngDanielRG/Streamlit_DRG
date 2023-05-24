@@ -10,16 +10,18 @@ def sidebar():
     st.markdown("<h1 style='text-align: center; color: #7D3C98 ;'> Rearreanged</h1>", unsafe_allow_html=True)
     
     with st.sidebar:
-        # st.header("Encabezado")
-        menu_title = "Main Menu"
-        st.subheader("Subencabezado")
-        text = st.text_area("Filtrar ")
-
-        button0 = st.button("Golf")
-        if button0:
-            st.write(text)
-   
- 
+        selected = option_menu(
+            menu_title = "Main Menu", 
+            options = ["Home", "Projects", "Contacts"],
+        )
+    if selected == "Home":
+        st.title(f"You have selected {selected}")
+    if selected == "Projects":
+        st.title(f"You have selected {selected}")
+    if selected == "Contact":
+        st.title(f"You have selected {selected}")
+            
+           
 def header():
   st.header("TRC")
   col1, col2, col3, col4 = st.columns(4)
