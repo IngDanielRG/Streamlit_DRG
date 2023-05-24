@@ -53,7 +53,7 @@ def csv():
     # Load the .csv file
     df = pd.read_csv(csv_url)
     # Display the table using Streamlit
-    st.data_frame(df)
+    st.dataframe(df)
         
     
 def barra():
