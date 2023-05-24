@@ -51,7 +51,7 @@ def header():
 def csv():
     csv_url = "https://github.com/IngDanielRG/Streamlit_DRG/blob/main/Game.csv"
     # Load the .xls file
-    df = pd.read_excel(csv_url)
+    df = pd.read_csv(csv_url)
     # Display the table using Streamlit
     st.line_chart(df)
         
