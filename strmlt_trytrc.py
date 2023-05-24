@@ -1,6 +1,5 @@
 from __future__ import annotations
 import streamlit as st
-from streamlit_option_menu import option_menu
 import pandas as pd
 import numpy as np
 
