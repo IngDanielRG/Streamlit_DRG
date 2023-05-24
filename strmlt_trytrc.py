@@ -50,9 +50,10 @@ def header():
     elif not button4:
         st.write("Q")
       
-def xls():
+def csv():
+    csv_url = ""
     # Load the .xls file
-    df = pd.read_excel('Streamlit_DRG/Game.csv')
+    df = pd.read_excel(csv_url)
     # Display the table using Streamlit
     st.line_chart(df)
         
