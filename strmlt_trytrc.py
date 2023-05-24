@@ -52,7 +52,7 @@ def header():
       
 def xls():
     # Load the .xls file
-    df = pd.read_excel('Game.xls')
+    df = pd.read_excel('Game.csv')
 
     # Display the table using Streamlit
     st.write(df)
