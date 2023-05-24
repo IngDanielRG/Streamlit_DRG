@@ -14,7 +14,7 @@ def sidebar():
             menu_title = "Main Menu", #required
             options = ["Home", "Projects", "Contact"], #required
         )
-    if selected= "Home":
+    if select == "Home":
         st.title(f"You have selected {select}")
     elif select == "Projects":
         st.title(f"You have selected {select}")
