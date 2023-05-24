@@ -8,8 +8,7 @@ import numpy as np
 
 def sidebar():
     st.markdown("<h1 style='text-align: center; color: #7D3C98 ;'> Rearreanged</h1>", unsafe_allow_html=True)
-    
-    with st.sidebar:
+
         select = option_menu(
             menu_title = "Main Menu", #required
             options = ["Operaciones", "Ventas", "Membresías"], #required
