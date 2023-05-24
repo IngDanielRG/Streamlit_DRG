@@ -52,10 +52,10 @@ def header():
       
 def xls():
     # Load the .xls file
-    data = pd.read_excel('path/to/your/file.xls')
+    df = pd.read_excel('Game.xls')
 
     # Display the table using Streamlit
-    st.write(data)
+    st.write(df)
         
     
 def barra():
