@@ -51,7 +51,11 @@ def header():
         st.write("Q")
       
 def xls():
-    game_data = pd.read_csv("Game.csv")
+    # Load the .xls file
+    data = pd.read_excel('path/to/your/file.xls')
+
+    # Display the table using Streamlit
+    st.write(data)
         
     
 def barra():
