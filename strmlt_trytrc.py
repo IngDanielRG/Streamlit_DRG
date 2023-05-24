@@ -1,5 +1,6 @@
 from __future__ import annotations
 import streamlit as st
+from streamlit_option_menu import option_menu
 import pandas as pd
 import numpy as np
 
@@ -9,16 +10,16 @@ def sidebar():
     st.markdown("<h1 style='text-align: center; color: #7D3C98 ;'> Rearreanged</h1>", unsafe_allow_html=True)
     
     with st.sidebar:
-        selected = st.sidebar.radio(
-            "Main Menu", #required
-            ["Home", "Projects", "Contact"], #required
+        select = option_menu(
+            menu_title = "Main Menu", #required
+            options = ["Home", "Projects", "Contact"], #required
         )
-    if selected == "Home":
-        st.title(f"You have selected {selected}")
-    elif selected == "Projects":
-        st.title(f"You have selected {selected}")
-    elif selected == "Contact":
-        st.title(f"You have selected {selected}")
+    if selected= "Home":
+        st.title(f"You have selected {select}")
+    elif select == "Projects":
+        st.title(f"You have selected {select}")
+    elif select == "Contact":
+        st.title(f"You have selected {select}")
             
            
 def header():
