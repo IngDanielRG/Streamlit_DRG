@@ -1,13 +1,16 @@
 from __future__ import annotations
 import streamlit as st
+from streamlit_option_menu import option_menu
 import pandas as pd
 import numpy as np
 
+st.markdown("<h1 style='text-align: center; color: #7D3C98 ;'> Rearreanged</h1>", unsafe_allow_html=True)
+
 def sidebar():
-    # st.title("O")
-    st.markdown("<h1 style='text-align: center; color: #7D3C98 ;'> Rearreanged</h1>", unsafe_allow_html=True)
+    
     with st.sidebar:
-        st.header("Encabezado")
+        # st.header("Encabezado")
+        menu_title = "Main Menu"
         st.subheader("Subencabezado")
         text = st.text_area("Filtrar ")
 
