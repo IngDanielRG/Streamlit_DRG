@@ -9,15 +9,15 @@ def sidebar():
     st.markdown("<h1 style='text-align: center; color: #7D3C98 ;'> Rearreanged</h1>", unsafe_allow_html=True)
     
     with st.sidebar:
-        selected = option_menu(
-            menu_title = "Main Menu", #required
-            options = ["Home", "Projects", "Contact"], #required
+        selected = st.sidebar.selectbox(
+            "Main Menu", #required
+            ["Home", "Projects", "Contact"], #required
         )
     if selected == "Home":
         st.title(f"You have selected {selected}")
-    if selected == "Projects":
+    elif selected == "Projects":
         st.title(f"You have selected {selected}")
-    if selected == "Contact":
+    elif selected == "Contact":
         st.title(f"You have selected {selected}")
             
            
