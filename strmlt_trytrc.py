@@ -49,7 +49,7 @@ def header():
         st.write("Q")
       
 def csv():
-    csv_url = "https://github.com/IngDanielRG/Streamlit_DRG/blob/main/try.csv"
+    csv_url = "https://raw.githubusercontent.com/IngDanielRG/Streamlit_DRG/main/try.csv"
     # Load the .csv file
     df = pd.read_csv(csv_url, encoding='utf-8')
     # Display the table using Streamlit
