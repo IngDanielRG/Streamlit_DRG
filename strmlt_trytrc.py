@@ -53,9 +53,8 @@ def header():
 def xls():
     # Load the .xls file
     df = pd.read_excel('Streamlit_DRG/Game.csv')
-
     # Display the table using Streamlit
-    st.write(df)
+    st.line_chart(df)
         
     
 def barra():
