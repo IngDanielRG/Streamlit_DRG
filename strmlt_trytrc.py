@@ -31,16 +31,16 @@ def header():
   with col1:
     button1 = st.button("TRC?")
     if button1:
-        st.write("Si")
-    elif not button1:
         st.write("Golf")
+    elif not button1:
+        st.write("Si")
         
   with col2:
     button2 = st.button("TRC")
     if button2:
-        st.write("No")
+        st.write("Golfn't")
     elif not button1:
-        st.write("Golf'nt")
+        st.write("No")
         
   with col3:
     button3 = st.button("Doc")
