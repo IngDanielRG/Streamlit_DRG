@@ -13,7 +13,7 @@ def sidebar():
         menu_title = None, #required
         options = ["Operaciones", "Ventas", "Membresías"], #required
         icons = ["gear", "bar-chart", "person-badge"], #optional --- https://icons.getbootstrap.com/
-        orientation = "horizontal",
+        # orientation = "horizontal",
     )
     
     if select == "Home":
