@@ -66,7 +66,7 @@ def chart():
             
     with col2:
         chart_data = pd.DataFrame(
-            np.random.randn(20, 3),
+            np.random.randn(20, 4),
             columns=['a', 'b', 'c', 'd'])
         st.bar_chart(chart_data)
         
