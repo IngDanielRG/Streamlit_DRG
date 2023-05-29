@@ -64,10 +64,10 @@ def chart():
             # Display the table using Streamlit
             st.line_chart(df)
             
-     with col2:
-            chart_data = pd.DataFrame(
-                np.random.randn(20, 3),
-                columns=['a', 'b', 'c'])
+    with col2:
+        chart_data = pd.DataFrame(
+            np.random.randn(20, 3),
+            columns=['a', 'b', 'c'])
 
             st.bar_chart(chart_data)
         
