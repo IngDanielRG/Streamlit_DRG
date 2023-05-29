@@ -62,7 +62,7 @@ def chart():
             # Load the .csv file
             df = pd.read_csv(csv_url, encoding='utf-8')
             # Display the table using Streamlit
-            st.bar_chart(df)
+            st.line_chart(df)
             
     with col2:
         chart_data = pd.DataFrame(
