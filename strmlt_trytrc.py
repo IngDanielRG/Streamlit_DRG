@@ -58,14 +58,13 @@ def chart():
     col1, col2 = st.columns(2)
     
     with col1:
-        def line():
             csv_url = "https://raw.githubusercontent.com/IngDanielRG/Streamlit_DRG/main/try.csv"
             # Load the .csv file
             df = pd.read_csv(csv_url, encoding='utf-8')
             # Display the table using Streamlit
             st.line_chart(df)
-    
-        def bar():
+            
+     with col2:
             chart_data = pd.DataFrame(
                 np.random.randn(20, 3),
                 columns=['a', 'b', 'c'])
@@ -75,5 +74,5 @@ def chart():
 sidebar()
 buttons()
 chart()
-line()
-bar()
+#line()
+#bar()
