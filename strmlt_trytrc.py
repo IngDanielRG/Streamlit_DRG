@@ -15,9 +15,13 @@ def sidebar():
         orientation = "horizontal", 
     )
     
+    if select == "Home":
+        st.title(f"You have selected {select}")
+    elif select == "Projects":
+        st.title(f"You have selected {select}")
+    elif select == "Contact":
+        st.title(f"You have selected {select}")
     
-            
-           
 def header():
   st.header("TRC")
   col1, col2, col3, col4 = st.columns(4)
