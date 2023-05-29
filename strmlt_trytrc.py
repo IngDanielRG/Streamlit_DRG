@@ -74,7 +74,7 @@ def chart():
                 y = "Memberships",
                 x = "Month",
             )
-            st.altair.chart(bar_chart, use_container_width=True)    
+            st.altair_chart(bar_chart, use_container_width=True)    
                 
 sidebar()
 buttons()
