@@ -11,8 +11,8 @@ def sidebar():
 
     select = option_menu(
         menu_title = None, #required
-        options = ["Operaciones", "Ventas", "Membresías"], #required
-        icons = ["camera", "bar-chart", "person-badge"], #optional --- https://icons.getbootstrap.com/
+        options = ["Operaciones", "Ventas", "Membresías", "Efectividad"], #required
+        icons = ["gear", "bar-chart", "person-badge", "caret-up"], #optional --- https://icons.getbootstrap.com/
         orientation = "horizontal", 
     )
     
