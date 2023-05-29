@@ -22,7 +22,7 @@ def sidebar():
     elif select == "Contact":
         st.title(f"You have selected {select}")
     
-def header():
+def buttons():
   st.header("TRC")
   col1, col2, col3, col4 = st.columns(4)
   
@@ -54,7 +54,7 @@ def header():
     elif not button4:
         st.write("Q")
       
-def csv():
+def line():
     csv_url = "https://raw.githubusercontent.com/IngDanielRG/Streamlit_DRG/main/try.csv"
     # Load the .csv file
     df = pd.read_csv(csv_url, encoding='utf-8')
@@ -62,7 +62,7 @@ def csv():
     st.line_chart(df)
         
     
-def barra():
+def bar():
     chart_data = pd.DataFrame(
         np.random.randn(20, 3),
         columns=['a', 'b', 'c'])
@@ -70,6 +70,6 @@ def barra():
     st.bar_chart(chart_data)
         
 sidebar()
-header()
-csv()
-barra()
+buttons()
+line()
+bar()
