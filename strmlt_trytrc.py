@@ -67,7 +67,7 @@ def chart():
     with col2:
             csv_url = "https://raw.githubusercontent.com/IngDanielRG/Streamlit_DRG/main/mes_bar.csv"
             # Load the .csv file
-            df = pd.read_csv(csv_url, encoding='utf-8')
+            df = pd.read_csv(csv_url)
             # Display the table using Streamlit
             st.bar_chart(df)
        
