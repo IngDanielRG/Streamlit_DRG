@@ -12,8 +12,8 @@ def sidebar():
     select = option_menu(
         menu_title = None, #required
         options = ["Operaciones", "Ventas", "Membresías"], #required
-        icons = ["gear", "bar-chart", "person-badge"], #optional --- https://icons.getbootstrap.com/
-        orientation = "horizontal",
+        icons = ["camera", "bar-chart", "person-badge"], #optional --- https://icons.getbootstrap.com/
+        orientation = "horizontal", 
     )
     
     if select == "Home":
