@@ -65,7 +65,7 @@ def chart():
             st.line_chart(df)
             
     with col2:
-            csv_url = "https://raw.githubusercontent.com/IngDanielRG/Streamlit_DRG/main/mes_member.csv"
+            csv_url = "https://raw.githubusercontent.com/IngDanielRG/Streamlit_DRG/main/mes_bar.csv"
             # Load the .csv file
             df = pd.read_csv(csv_url, encoding='utf-8')
             # Display the table using Streamlit
