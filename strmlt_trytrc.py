@@ -70,7 +70,7 @@ def chart():
                 "Month":["ENE", "FEB", "MAR", "ABR", "MAY", "JUN", "JUL", "AGO", "SEPT", "OCT", "NOV", "DIC"]
             })
                 
-            bar_chart = alt.chart(source).mark_bar().encode(
+            bar_chart = altair.chart(source).mark_bar().encode(
                 y = "Memberships",
                 x = "Month",
             )
