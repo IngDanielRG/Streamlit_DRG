@@ -72,7 +72,7 @@ def chart():
             })
                 
             bar_chart = alt.Chart(source).mark_bar().encode(
-                y = "Memberships", "Dummy"
+                y = "Memberships", "Dummy",
                 x = "Month",
             )
             st.altair_chart(bar_chart, use_container_width=True)
