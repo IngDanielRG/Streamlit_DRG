@@ -24,38 +24,20 @@ def sidebar():
     
 def buttons():
   st.header("TRC")
-  col1, col2, col3, col4 = st.columns(4)
-  
+  col1, col2, col3 = st.columns(3)
+        
   with col1:
-    button1 = st.button("TRC?")
-    if button1:
-        st.write("Golf")
-    elif not button1:
-        st.write("Si")
+    col1.metric("Ingresos por Membresía", "100K", "20%")
         
   with col2:
-    button2 = st.button("TRC")
-    if button2:
-        st.write("Golfn't")
-    elif not button1:
-        st.write("No")
-        
-  with col3:
-    button3 = st.button("Doc")
-    if button3:
-        st.write("No")
-    elif not button3:
-        st.write("Ask")
+    col2.metric("Ingresos por Vendedor", "100K", "20%")
 
-  with col4:
-    button4 = st.button("Han")
-    if button4:
-        st.write("No")
-    elif not button4:
-        st.write("Q")
+  with col3:
+    col3.metric("Costos de Operación", "100K", "-4.2")
+    
       
 def chart():
-    col1, col2, col3 = st.columns(3)
+    col1, col2 = st.columns(2)
     
     with col1:
             csv_url = "https://raw.githubusercontent.com/IngDanielRG/Streamlit_DRG/main/try.csv"
@@ -75,10 +57,7 @@ def chart():
                 y = "Memberships", 
                 x = "Month",
             )
-            st.altair_chart(bar_chart, use_container_width=True)
-            
-    with col3:
-        col3.metric("Ingresos", "100K", "20%")       
+            st.altair_chart(bar_chart, use_container_width=True)       
             
                 
 sidebar()
