@@ -68,7 +68,7 @@ def chart():
             source = pd.DataFrame({
                 "Memberships":[ 15, 14, 9, 24, 11, 15, 15, 18, 14, 15, 13, 17],
                 "Month":["ENE", "FEB", "MAR", "ABR", "MAY", "JUN", "JUL", "AGO", "SEPT", "OCT", "NOV", "DIC"],
-            )}
+            })
                 
             bar_chart = alt.chart(source).mark_bar().encode(
                 y = "Memberships",
