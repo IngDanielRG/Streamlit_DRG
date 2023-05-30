@@ -66,7 +66,7 @@ def chart():
             
     with col2:
             source = pd.DataFrame({
-                "Dummy" : [2, 4, 6, 8 ,10, 12, 14, 16, 18, 20, 22, 26]
+                "Dummy" : [2, 4, 6, 8 ,10, 12, 14, 16, 18, 20, 22, 26],
                 "Memberships" :[ 15, 14, 9, 24, 11, 15, 15, 18, 14, 15, 13, 17],
                 "Month" :["ENE", "FEB", "MAR", "ABR", "MAY", "JUN", "JUL", "AGO", "SEPT", "OCT", "NOV", "DIC"]
             })
