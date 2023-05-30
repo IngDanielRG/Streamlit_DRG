@@ -30,7 +30,7 @@ def buttons():
     col1.metric("Ingresos por Membresía", "100K", "20%")
         
   with col2:
-    col2.metric("Ingresos por Vendedor", "100K", "20%")
+    col2.metric("Ingresos por Vendedor", "20MDP", "30%")
 
   with col3:
     col3.metric("Costos de Operación", "100K", "-4.2")
