@@ -65,16 +65,16 @@ def chart():
             st.line_chart(df)
             
     with col2:
-            csv_url = "https://raw.githubusercontent.com/IngDanielRG/Streamlit_DRG/main/mes_bar.csv"
-            # Load the .csv file
-            df = pd.read_csv(csv_url, encoding='utf-8')
-            # Display the table using Streamlit
+            source = pd.DataFrame({
+                "Memberships":[ 15, 14, 9, 24, 11, 15, 15, 18, 14, 15, 13, 17],
+                "Month":["ENE", "FEB", "MAR", "ABR", "MAY", "JUN", "JUL", "AGO", "SEPT", "OCT", "NOV", "DIC"]
+            })
                 
-            bar_chart = alt.Chart(csv_url).mark_bar().encode(
+            bar_chart = alt.Chart(source).mark_bar().encode(
                 y = "Memberships",
                 x = "Month",
             )
-            st.altair_chart(bar_chart, use_container_width=True)    
+            st.altair_chart(bar_chart, use_container_width=True)
                 
 sidebar()
 buttons()
