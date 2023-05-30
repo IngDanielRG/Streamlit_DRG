@@ -68,8 +68,7 @@ def chart():
             csv_url = "https://raw.githubusercontent.com/IngDanielRG/Streamlit_DRG/main/mes_bar.csv"
             # Load the .csv file
             df = pd.read_csv(csv_url, encoding='utf-8')
-            # Display the table using Streamli
-            })
+            # Display the table using Streamlit
                 
             bar_chart = alt.Chart(csv_url).mark_bar().encode(
                 y = "Memberships",
