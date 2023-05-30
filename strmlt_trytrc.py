@@ -23,7 +23,7 @@ def sidebar():
         st.title(f"You have selected {select}")
     
 def buttons():
-  st.header("TRC")
+  st.header("IMU")
   col1, col2, col3 = st.columns(3)
         
   with col1:
