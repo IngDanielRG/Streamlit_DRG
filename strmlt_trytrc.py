@@ -55,7 +55,7 @@ def buttons():
         st.write("Q")
       
 def chart():
-    col1, col2 = st.columns(2)
+    col1, col2, col3 = st.columns(3)
     
     with col1:
             csv_url = "https://raw.githubusercontent.com/IngDanielRG/Streamlit_DRG/main/try.csv"
@@ -76,6 +76,10 @@ def chart():
                 x = "Month",
             )
             st.altair_chart(bar_chart, use_container_width=True)
+            
+    with col3:
+        col3.metric("Ingresos", "100K", "20%")       
+            
                 
 sidebar()
 buttons()
