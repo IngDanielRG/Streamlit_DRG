@@ -82,5 +82,6 @@ def pie():
                 
 sidebar()
 buttons()
+pie()
 #line()
 #bar()
