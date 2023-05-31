@@ -60,47 +60,7 @@ def chart():
             )
             st.altair_chart(bar_chart, use_container_width=True)       
             
-def serial():
 
-# Configure the serial port
-ser = serial.Serial('COM6', 9600)  
-ser.flushInput()
-
-# Create a placeholder for the data
-data = {'Value': [], 'Timestamp': []}
-
-# Create a Streamlit chart
-chart = alt.Chart(pd.DataFrame(data)).mark_line().encode(
-    x='Timestamp:T',
-    y='Value:Q'
-).interactive()
-
-# Display the chart in the Streamlit app
-st.altair_chart(chart, use_container_width=True)
-
-# Continuously update the chart with new data
-while True:
-    try:
-        # Read the data from the serial port
-        line = ser.readline().decode('utf-8').rstrip()
-
-        # Process the received data
-        # Perform any necessary conversions or data manipulations here
-        
-        # Update the data dictionary
-        data['Value'].append(float(line))
-        data['Timestamp'].append(pd.Timestamp.now())
-
-        # Update the chart data
-        chart.data = pd.DataFrame(data)
-
-        # Update the Streamlit app
-        st.altair_chart(chart, use_container_width=True)
-
-    except KeyboardInterrupt:
-        break
-
-ser.close()
 
     
             
