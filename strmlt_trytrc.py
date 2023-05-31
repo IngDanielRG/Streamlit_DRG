@@ -1,5 +1,6 @@
 import streamlit as st
-from streamlit_option_menu import option_menu
+from streamlit_option_menu import option_men
+from matplotlib import pyplot as plt
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
