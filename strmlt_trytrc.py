@@ -1,5 +1,6 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
+import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 import altair as alt
@@ -15,12 +16,12 @@ def sidebar():
         orientation = "horizontal", 
     )
     
-    if select == "Home":
-        st.title(f"You have selected {select}")
-    elif select == "Projects":
-        st.title(f"You have selected {select}")
-    elif select == "Contact":
-        st.title(f"You have selected {select}")
+   # if select == "Home":
+    #    st.title(f"You have selected {select}")
+   # elif select == "Projects":
+    #    st.title(f"You have selected {select}")
+   # elif select == "Contact":
+    #    st.title(f"You have selected {select}")
     
 def buttons():
   st.header("IMU")
@@ -59,9 +60,54 @@ def chart():
             )
             st.altair_chart(bar_chart, use_container_width=True)       
             
+def serial():
+
+# Configure the serial port
+ser = serial.Serial('COM6', 9600)  
+ser.flushInput()
+
+# Create a placeholder for the data
+data = {'Value': [], 'Timestamp': []}
+
+# Create a Streamlit chart
+chart = alt.Chart(pd.DataFrame(data)).mark_line().encode(
+    x='Timestamp:T',
+    y='Value:Q'
+).interactive()
+
+# Display the chart in the Streamlit app
+st.altair_chart(chart, use_container_width=True)
+
+# Continuously update the chart with new data
+while True:
+    try:
+        # Read the data from the serial port
+        line = ser.readline().decode('utf-8').rstrip()
+
+        # Process the received data
+        # Perform any necessary conversions or data manipulations here
+        
+        # Update the data dictionary
+        data['Value'].append(float(line))
+        data['Timestamp'].append(pd.Timestamp.now())
+
+        # Update the chart data
+        chart.data = pd.DataFrame(data)
+
+        # Update the Streamlit app
+        st.altair_chart(chart, use_container_width=True)
+
+    except KeyboardInterrupt:
+        break
+
+ser.close()
+
+    
+            
                 
 sidebar()
 buttons()
 chart()
+serial()
 #line()
 #bar()
