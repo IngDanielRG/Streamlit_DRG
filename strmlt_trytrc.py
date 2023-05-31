@@ -61,7 +61,7 @@ def chart():
             st.altair_chart(bar_chart, use_container_width=True)       
     
 def pie():
-    col1 = st.colums(1)
+    col1 = st.columns(1)
     
     with col1:
         # Pie chart, where the slices will be ordered and plotted counter-clockwise:
