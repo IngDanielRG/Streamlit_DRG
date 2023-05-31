@@ -24,7 +24,7 @@ def sidebar():
     #    st.title(f"You have selected {select}")
     
 def buttons():
-  st.header("IMU")
+  st.header("TRC")
   col1, col2, col3 = st.columns(3)
         
   with col1:
@@ -38,7 +38,7 @@ def buttons():
     
       
 def chart():
-    col1, col2 = st.columns(2)
+    col1, col2, col3 = st.columns(3)
     
     with col1:
             csv_url = "https://raw.githubusercontent.com/IngDanielRG/Streamlit_DRG/main/try.csv"
@@ -60,10 +60,7 @@ def chart():
             )
             st.altair_chart(bar_chart, use_container_width=True)       
     
-def pie():
-    col1 = st.columns(1)
-    
-    with col1:
+    with col3:
         # Pie chart, where the slices will be ordered and plotted counter-clockwise:
         labels = 'Frogs', 'Hogs', 'Dogs', 'Logs'
         sizes = [15, 30, 45, 10]
@@ -82,6 +79,6 @@ def pie():
                 
 sidebar()
 buttons()
-pie()
+chart()
 #line()
 #bar()
